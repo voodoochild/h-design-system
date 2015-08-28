@@ -1,0 +1,97 @@
+// Typography for Hotels.com
+
+$sans-serif: 'Noto Sans', arial, sans-serif;
+$serif: 'Noto Serif', sans-serif;
+
+@mixin font-size($size, $line-height: $size) {
+  font-size: $size * 1px;
+  font-size: ($size / 10) * 1rem;
+  line-height: $line-height * 1px;
+  line-height: ($line-height / 10) * 1rem;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: (10/16) * 1em;
+  font-family: $sans-serif;
+}
+
+body {
+  font-size: 100%;
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.zeus {
+  @include font-size(48, 56);
+  font-weight: 700;
+}
+
+.hera {
+  @include font-size(32, 36);
+}
+
+.poseidon {
+  @include font-size(24, 32);
+}
+
+.demeter {
+  @include font-size(20, 28);
+}
+
+.hypnos {
+  @include font-size(16, 24);
+}
+
+.aphrodite {
+  @include font-size(14, 20);
+}
+
+.apollo {
+  @include font-size(12, 16);
+}
+
+.nike {
+  @include font-size(12, 16);
+  text-transform: uppercase;
+}
+
+.iris {
+  @include font-size(16, 24);
+}
+
+.nemesis {
+  @include font-size(14, 20);
+}
+
+.iris,
+.nemesis {
+  font-family: $serif;
+  font-style: italic;
+}
+
+.h-zeus {
+  @extend .zeus;
+  @include rem('margin-bottom', 36);
+}
+
+.h-hera {
+  @extend .hera;
+  @include rem('margin-bottom', 32);
+}
+
+.h-poseidon {
+  @extend .poseidon;
+  @include rem('margin-bottom', 28);
+}
+
+.h-demeter {
+  @extend .demeter;
+  @include rem('margin-bottom', 24);
+}

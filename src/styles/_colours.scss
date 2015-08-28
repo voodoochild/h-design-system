@@ -1,0 +1,80 @@
+// Colour palette for Hotels.com
+
+// UI
+$grey-1: #333;
+$grey-2: lighten($grey-1, 15%);
+$grey-3: lighten($grey-1, 30%);
+$grey-4: lighten($grey-1, 45%);
+$grey-5: lighten($grey-1, 60%);
+$grey-6: lighten($grey-1, 75%);
+$blue-1: #06c;
+$blue-2: lighten($blue-1, 10%);
+$blue-3: lighten($blue-1, 20%);
+$blue-4: lighten($blue-1, 30%);
+$blue-5: lighten($blue-1, 40%);
+$blue-6: lighten($blue-1, 50%);
+$green-1: #393;
+$green-2: lighten($green-1, 10%);
+$green-3: lighten($green-1, 20%);
+$green-4: lighten($green-1, 30%);
+$green-5: lighten($green-1, 40%);
+$green-6: lighten($green-1, 50%);
+$yellow-1: #fc0;
+$yellow-2: lighten($yellow-1, 5%);
+$yellow-3: lighten($yellow-1, 10%);
+$yellow-4: lighten($yellow-1, 15%);
+$yellow-5: lighten($yellow-1, 20%);
+$yellow-6: lighten($yellow-1, 25%);
+$red-1: #c33;
+$red-2: lighten($red-1, 5%);
+$red-3: lighten($red-1, 10%);
+$red-4: lighten($red-1, 15%);
+$red-5: lighten($red-1, 20%);
+$red-6: lighten($red-1, 25%);
+$brown-1: #e3d0ab;
+$brown-2: #e9dbbe;
+$brown-3: #f0e5d1;
+$brown-4: #f6f0e4;
+$brown-5: #fcfbf7;
+$purple-1: #800055;
+$purple-2: #906;
+$purple-3: #b30077;
+$purple-4: #c08;
+$purple-5: #e60099;
+$silver-1: #b3b3b3;
+$silver-2: #a6a6a6;
+$silver-3: #c0c0c0;
+$silver-4: #ccc;
+$silver-5: #d9d9d9;
+$gold-1: #dbb50f;
+$gold-2: #efc714;
+$gold-3: #f1cd2c;
+$gold-4: #f2d244;
+$gold-5: #f4d85c;
+
+// Primary brand colours
+$brand-red: #ee3424;
+$brand-blue: #4f77bb;
+$brand-green: #6ea53b;
+$brand-purple: #782b7b;
+
+// Buttons
+$btn-text:          white;
+$btn-background:    #19a9e5;
+$btn-shadow:        #0287c3;
+$btn-hover:         #35baf6;
+$btn-outline:       #19a9e5;
+$btn-disabled:      #cfd8dc;
+$btn-disabled-text: #607d8b;
+
+// Social
+$social-facebook:  #3b5998;
+$social-twitter:   #00aced;
+$social-google:    #dd4b39;
+$social-pinterest: #cb2027;
+$social-instagram: #517fa4;
+$social-youtube:   #bb0000;
+$social-linkedin:  #007bb6;
+$social-vimeo:     #aad450;
+$social-weibo:     #e6162d;
+$social-vk:        #45668e;

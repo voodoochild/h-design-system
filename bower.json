@@ -1,0 +1,6 @@
+{
+  "name": "design-system",
+  "devDependencies": {
+    "prism": "~1.0.1"
+  }
+}

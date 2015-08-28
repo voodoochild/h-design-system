@@ -1,0 +1,63 @@
+// Colour swatches
+
+@import '_colours';
+
+.colour-swatch {
+  @extend .aphrodite;
+  text-align: center;
+
+  &:before {
+    background-color: transparent;
+    content: ' ';
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    @include border-radius(100%);
+  }
+
+  .colour-name {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  // Programatically churns out classes to use for each UI colour
+  $base-colors: (
+    grey:   $grey-1 $grey-2 $grey-3 $grey-4 $grey-5 $grey-6,
+    blue:   $blue-1 $blue-2 $blue-3 $blue-4 $blue-5 $blue-6,
+    green:  $green-1 $green-2 $green-3 $green-4 $green-5 $green-6,
+    yellow: $yellow-1 $yellow-2 $yellow-3 $yellow-4 $yellow-5 $yellow-6,
+    red:    $red-1 $red-2 $red-3 $red-4 $red-5 $red-6,
+    brown:  $brown-1 $brown-2 $brown-3 $brown-4 $brown-5,
+    purple: $purple-1 $purple-2 $purple-3 $purple-4 $purple-5,
+    silver: $silver-1 $silver-2 $silver-3 $silver-4 $silver-5,
+    gold:   $gold-1 $gold-2 $gold-3 $gold-4 $gold-5
+  );
+  @for $i from 1 through 6 {
+    @each $colour, $tints in $base-colors {
+      @if ($i <= length($tints)) {
+        &.colour-#{$colour}-#{$i}:before {
+          background-color: nth($tints, $i);
+        }
+      }
+    }
+  }
+
+  // Primary brand colours
+  &.colour-brand-red:before    { background-color: $brand-red; }
+  &.colour-brand-blue:before   { background-color: $brand-blue; }
+  &.colour-brand-green:before  { background-color: $brand-green; }
+  &.colour-brand-purple:before { background-color: $brand-purple; }
+
+  // Social
+  &.colour-facebook:before  { background-color: $social-facebook; }
+  &.colour-twitter:before   { background-color: $social-twitter; }
+  &.colour-google:before    { background-color: $social-google; }
+  &.colour-pinterest:before { background-color: $social-pinterest; }
+  &.colour-instagram:before { background-color: $social-instagram; }
+  &.colour-youtube:before   { background-color: $social-youtube; }
+  &.colour-linkedin:before  { background-color: $social-linkedin; }
+  &.colour-vimeo:before     { background-color: $social-vimeo; }
+  &.colour-weibo:before     { background-color: $social-weibo; }
+  &.colour-vk:before        { background-color: $social-vk; }
+}

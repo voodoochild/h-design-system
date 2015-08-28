@@ -1,0 +1,16 @@
+// Measurements used across Hotels.com
+
+$full-width: 100%;
+$one-twelfth: $full-width/12;
+$one-quarter: $full-width/4;
+$one-third: $full-width/3;
+$half: $full-width/2;
+$two-thirds: ($full-width)-($one-third);
+$three-quarters: ($full-width)-($one-quarter);
+
+$gutter: 16px;
+$gutter-one-twelfth: $gutter/12;
+$gutter-one-quarter: $gutter/4;
+$gutter-one-third: $gutter/3;
+$gutter-half: $gutter/2;
+$gutter-two-thirds: $gutter - $gutter-one-third;

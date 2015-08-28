@@ -1,0 +1,70 @@
+// Button styles
+
+@import '_css3';
+@import '_colours';
+@import '_typography';
+
+.btn {
+  @extend .hypnos;
+  background-color: $btn-background;
+  border: 1px solid transparent;
+  color: $btn-text;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include border-radius(4px);
+  @include box-shadow(0 4px $btn-shadow);
+
+  &:hover {
+    background-color: $btn-hover;
+    @include box-shadow(0 2px $btn-shadow);
+    @include translate(0, 2px);
+  }
+
+  &.btn-xlarge {
+    @extend .hera;
+  }
+
+  &.btn-large {
+    @extend .demeter;
+  }
+
+  &.btn-medium {
+    @extend .hypnos;
+  }
+
+  &.btn-small {
+    @extend .nike;
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    border-color: $btn-outline;
+    color: $btn-outline;
+    @include box-shadow(none);
+
+    &:hover {
+      background-color: transparent;
+      @include box-shadow(none);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-disabled {
+    background-color: $btn-disabled;
+    color: $btn-disabled-text;
+    cursor: not-allowed;
+    opacity: 0.75;
+    @include box-shadow(none);
+
+    &:hover {
+      background-color: $btn-disabled;
+      @include box-shadow(none);
+      @include translate(0, 0);
+    }
+  }
+}
