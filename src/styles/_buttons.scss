@@ -1,9 +1,5 @@
 // Button styles
 
-@import '_css3';
-@import '_colours';
-@import '_typography';
-
 .btn {
   @extend .hypnos;
   background-color: $btn-background;
@@ -20,7 +16,12 @@
   @include box-shadow(0 4px $btn-shadow);
 
   &:hover {
-    background-color: $btn-hover;
+    background-color: $btn-background-hover;
+  }
+
+  &:active {
+    background-color: $btn-background-active;
+    outline: none;
     @include box-shadow(0 2px $btn-shadow);
     @include translate(0, 2px);
   }
@@ -49,6 +50,12 @@
 
     &:hover {
       background-color: transparent;
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
       @include box-shadow(none);
       @include translate(0, 0);
     }

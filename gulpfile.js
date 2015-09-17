@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+var babel = require('gulp-babel');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -15,7 +16,7 @@ function html () {
 function styles () {
   var files = [
     'bower_components/prism/themes/prism.css',
-    'src/styles/main.scss'
+    'src/styles/main.scss',
   ];
   return gulp.src(files)
     .pipe(sass())
@@ -25,13 +26,22 @@ function styles () {
 }
 
 // Build scripts
+// @TODO Split this out into two tasks so that base.js isn't rebuilt unnecessarily.
 function scripts () {
-  var files = [
+  var baseFiles = [
+    'node_modules/gulp-babel/node_modules/babel-core/browser-polyfill.min.js',
+    'bower_components/jquery/dist/jquery.min.js',
     'bower_components/prism/prism.js',
-    'src/scripts/**/*.js'
   ];
-  return gulp.src(files)
-    .pipe(concat('main.js'))
+
+  gulp.src(baseFiles)
+    .pipe(concat('base.js'))
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe(reload({ stream: true }));
+
+  gulp.src('src/scripts/**/*.js')
+    .pipe(babel())
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({ stream: true }));
 }

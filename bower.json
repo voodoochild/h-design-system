@@ -1,6 +1,7 @@
 {
   "name": "design-system",
   "devDependencies": {
+    "jquery": "~2.1.4",
     "prism": "~1.0.1"
   }
 }
