@@ -1,4 +1,6 @@
 ;(() => {
+  'use strict';
+
   class Colours {
     constructor(root = document.getElementById('colours')) {
       this.root = root;

@@ -31,7 +31,7 @@ function scripts () {
   var baseFiles = [
     'node_modules/gulp-babel/node_modules/babel-core/browser-polyfill.min.js',
     'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/prism/prism.js',
+    // 'bower_components/prism/prism.js',
   ];
 
   gulp.src(baseFiles)

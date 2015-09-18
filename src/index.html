@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en-GB" lang="en-GB" class="ie8" ><![endif]-->
+<!--[if IE 9]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en-GB" lang="en-GB" class="ie9" ><![endif]-->
+<!--[if gt IE 9]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en-GB" lang="en-GB"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta content="text/html;charset=UTF-8" http-equiv="content-type">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="mobile-web-app-capable" content="yes">
   <title>Hotels.com design system</title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic">
   <link rel="stylesheet" href="styles/main.css">
+  <link href="http://a1.cdn-hotels.com/da/assets/s/24.0/images/brands/hcom/favicon.ico" rel="shortcut icon">
+  <link rel="apple-touch-icon" href="http://a1.cdn-hotels.com/da/assets/s/24.0/images/brands/hcom/icons/ios-bookmark-180.png">
 </head>
 <body>
   <main class="site-wrap">
@@ -511,28 +516,159 @@
         </div>
       </div>
     </section>
-    <!-- <section id="forms">
+    <section id="forms">
       <h2 class="h-hera">Forms</h2>
       <div class="row">
         <div class="column-third">
-          <h3 class="demeter">Text inputs</h3>
+          <h3 class="demeter">Text input</h3>
         </div>
         <div class="column-two-thirds">
           <div class="form-field">
-            <label for="f-name">Name</label>
-            <input id="f-name" type="text" placeholder="Kriss Watt" />
+            <label for="text-1">Default</label>
+            <input id="text-1" type="text" value="Input value" placeholder="Write something" />
           </div>
           <div class="form-field">
-            <label for="f-email">Email address</label>
-            <input id="f-email" type="email" placeholder="kriss@hotels.com" />
+            <label for="text-2">Hover/focus</label>
+            <input class="focus" id="text-2" type="text" value="Input value" placeholder="Write something" />
+            <p class="help-message">Input on hover or when it has focus</p>
           </div>
           <div class="form-field">
-            <label for="f-password">Password</label>
-            <input id="f-password" type="password" value="bacon" />
+            <label for="text-3">Valid</label>
+            <input class="valid" id="text-3" type="text" value="Input value" placeholder="Write something" />
+            <i class="icon icon-tick">✔</i>
+            <p class="help-message">Input has been validated and the value is good</p>
+          </div>
+          <div class="form-field">
+            <label for="text-4">Error</label>
+            <input class="error" id="text-4" type="text" value="Input value" placeholder="Write something" />
+            <p class="error-message">This is how we indicate an erroneous value</p>
+          </div>
+          <div class="form-field">
+            <label for="text-5">Disabled</label>
+            <input id="text-5" type="text" value="Input value" disabled />
           </div>
         </div>
       </div>
-    </section> -->
+      <div class="row">
+        <div class="column-third">
+          <h3 class="demeter">Text area</h3>
+        </div>
+        <div class="column-two-thirds">
+          <div class="form-field">
+            <label for="text-5">Default</label>
+            <textarea id="text-5" rows="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor.</textarea>
+          </div>
+          <div class="form-field">
+            <label for="text-6">Hover/focus</label>
+            <textarea class="focus" id="text-6" rows="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor.</textarea>
+            <p class="help-message">Text area on hover or when it has focus</p>
+          </div>
+          <div class="form-field">
+            <label for="text-8">Error</label>
+            <textarea class="error" id="text-8" rows="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor.</textarea>
+            <p class="error-message">This is how we indicate an erroneous value</p>
+          </div>
+          <div class="form-field">
+            <label for="text-9">Disabled</label>
+            <textarea id="text-9" rows="6" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor. Phasellus congue, leo id mollis blandit, ex leo bibendum ligula, ac posuere ante metus vel tortor.</textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-third">
+          <h3 class="demeter">Select boxes</h3>
+        </div>
+        <div class="column-two-thirds">
+          <div class="form-field">
+            <label for="select-1">Default</label>
+            <select id="select-1">
+              <option>Dropdown</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="select-2">Hover/focus</label>
+            <select class="focus" id="select-2">
+              <option>Dropdown</op1tion>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+            <p class="help-message">Select on hover or when it has focus</p>
+          </div>
+          <div class="form-field">
+            <label for="select-3">Error</label>
+            <select class="error" id="select-3">
+              <option>Dropdown</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+            <p class="error-message">This is how we indicate an erroneous selection</p>
+          </div>
+          <div class="form-field">
+            <label for="select-4">Disabled</label>
+            <select id="select-4" disabled>
+              <option>Dropdown</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-third">
+          <h3 class="demeter">Checkboxes &amp; radio buttons</h3>
+        </div>
+        <div class="column-third">
+          <div class="form-field">
+            <input id="checkbox-1" type="checkbox" />
+            <label for="checkbox-1">Unchecked</label>
+          </div>
+          <div class="form-field">
+            <input id="checkbox-2" type="checkbox" checked />
+            <label for="checkbox-2">Checked</label>
+          </div>
+          <div class="form-field">
+            <input class="focus" id="checkbox-3" type="checkbox" />
+            <label for="checkbox-3">Hover/focus</label>
+          </div>
+          <div class="form-field">
+            <input class="error" id="checkbox-4" type="checkbox" />
+            <label for="checkbox-4">Error</label>
+          </div>
+          <div class="form-field">
+            <input id="checkbox-5" type="checkbox" disabled />
+            <label for="checkbox-5">Disabled (unchecked)</label>
+          </div>
+          <div class="form-field">
+            <input id="checkbox-6" type="checkbox" checked disabled />
+            <label for="checkbox-6">Disabled (checked)</label>
+          </div>
+        </div>
+        <div class="column-third">
+          <div class="form-field">
+            <input id="radio-1" name="group-1" type="radio" />
+            <label for="radio-1">Unchecked</label>
+          </div>
+          <div class="form-field">
+            <input id="radio-2" name="group-1" type="radio" checked />
+            <label for="radio-2">Checked</label>
+          </div>
+          <div class="form-field">
+            <input class="focus" id="radio-3" name="group-1" type="radio" />
+            <label for="radio-3">Hover/focus</label>
+          </div>
+          <div class="form-field">
+            <input class="error" id="radio-4" name="group-1" type="radio" />
+            <label for="radio-4">Error</label>
+          </div>
+          <div class="form-field">
+            <input id="radio-5" name="group-1" type="radio" disabled />
+            <label for="radio-5">Disabled</label>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="scripts/base.js"></script>
   <script src="scripts/app.js"></script>
