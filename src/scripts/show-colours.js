@@ -2,7 +2,7 @@
   'use strict';
 
   class Colours {
-    constructor(root = document.getElementById('colours')) {
+    constructor (root = document.getElementById('colours')) {
       this.root = root;
 
       // Calculate the hex code for each swatch

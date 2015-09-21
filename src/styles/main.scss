@@ -1,13 +1,13 @@
 // Main stylesheet
 
-@import '_reset';
-@import '_grid';
-@import '_css3';
-@import '_colours';
-@import '_buttons';
-@import '_typography';
-@import '_colour-swatches';
-@import '_forms';
+@import 'base/_reset';
+@import 'base/_grid';
+@import 'base/_css3';
+@import 'base/_colours';
+@import 'base/_typography';
+@import 'elements/_buttons';
+@import 'elements/_colour-swatches';
+@import 'elements/_forms';
 
 * {
   @include box-sizing(border-box);
@@ -15,6 +15,10 @@
 
 body {
   padding: 16px 0 48px 0;
+}
+
+main {
+  display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -122,4 +126,34 @@ li {
 
 #forms .row + .row {
   margin-top: 56px;
+}
+
+#background-switcher {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    list-style: none;
+    opacity: .8;
+    padding: 0;
+
+    li {
+      border: 2px solid $grey-5;
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: 8px;
+
+      &.active {
+        border-color: $grey-3;
+      }
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+  }
 }
