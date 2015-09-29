@@ -10,14 +10,12 @@
       swatches.map((swatch) => {
         let $circle = $(swatch.querySelector('b'));
         let $label = $(swatch.querySelector('.colour-name'));
-        $label.data('hex', this.rgb2hex($circle.css('background-color')) || '');
-        $label.data('name', $label.text() || '');
+        let hex = this.rgb2hex($circle.css('background-color'));
+        $label.after(`<input class="colour-hex" value="${hex}" readonly />`);
       });
 
-      // Bind hover events
-      $(this.root).on('mouseover mouseout', '.colour-swatch b', (e) => {
-        this.toggleText($(e.target).next());
-      });
+      // Select hex code on click
+      $(this.root).on('click', 'input', (e) => e.target.select());
     }
 
     rgb2hex (rgb) {
@@ -26,17 +24,6 @@
       }
       rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
       return '#' + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-    }
-
-    toggleText (label) {
-      let $label = $(label);
-      let name = $label.data('name');
-      let hex = $label.data('hex');
-      if ($label.text() === name) {
-        $label.text(hex);
-      } else {
-        $label.text(name);
-      }
     }
   }
 

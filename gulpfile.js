@@ -12,6 +12,13 @@ function html () {
     .pipe(reload({ stream: true }));
 }
 
+// Move custom fonts
+function fonts () {
+  return gulp.src('src/fonts/*')
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(reload({ stream: true }));
+}
+
 // Compile Sass to CSS
 function styles () {
   var files = [
@@ -48,6 +55,7 @@ function scripts () {
 // Execute build tasks
 gulp.task('build', function () {
   html();
+  fonts();
   styles();
   scripts();
 });

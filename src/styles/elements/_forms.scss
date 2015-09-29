@@ -15,15 +15,16 @@ label {
 [type="password"],
 textarea,
 select {
+  $base: 14px;
   @extend .aphrodite;
   background: white;
   border: 2px solid $grey-4;
   border-radius: 4px;
   color: $grey-1;
   font-family: $sans-serif;
-  line-height: 18px;
+  line-height: (18px/$base * 1em);
   margin-top: 4px;
-  padding: 8px 12px;
+  padding: (8px/$base * 1em) (12px/$base * 1em);
   width: 300px;
 
   &:hover,
@@ -31,11 +32,6 @@ select {
   &.focus {
     border-color: $blue-2;
     outline: none;
-  }
-
-  &.valid:hover,
-  &.valid:focus {
-    border-color: $green-1;
   }
 
   &:disabled {
@@ -104,9 +100,9 @@ select {
     }
 
     &:after {
+      @extend .icon;
       color: white;
-      content: '✔';
-      font-size: 20px;
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -199,4 +195,8 @@ select {
 
 .error-message {
   color: $red-1;
+}
+
+.error-message + .help-message {
+  margin-top: 0;
 }

@@ -5,6 +5,7 @@
 @import 'base/_css3';
 @import 'base/_colours';
 @import 'base/_typography';
+@import 'elements/_icons';
 @import 'elements/_buttons';
 @import 'elements/_colour-swatches';
 @import 'elements/_forms';
@@ -100,13 +101,13 @@ li {
 }
 
 .example p {
-  background-color: #fff4cc;
+  background-color: $yellow-3;
   margin: 0;
   padding: 16px 0;
   text-align: center;
   @include font-size(20,24);
   &:hover {
-    background-color: #ffea99;
+    background-color: $yellow-1;
   }
 }
 

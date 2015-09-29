@@ -16,7 +16,15 @@
   .colour-name {
     display: block;
     margin-top: 8px;
+  }
+
+  .colour-hex {
+    @extend .nike;
+    border: none;
+    color: $grey-4;
     margin-bottom: 16px;
+    outline: none;
+    text-align: center;
   }
 
   // Programatically churns out classes to use for each UI colour

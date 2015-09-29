@@ -1,7 +1,7 @@
 // Typography for Hotels.com
 
-$sans-serif: 'Noto Sans', arial, sans-serif;
-$serif: 'Noto Serif', sans-serif;
+$sans-serif: arial, sans-serif;
+$serif: serif;
 
 @mixin font-size($size, $line-height: $size) {
   font-size: $size * 1px;
